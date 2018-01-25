@@ -5,6 +5,8 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const swig = require('swig');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://riota:Riot$123@ds213688.mlab.com:13688/meetingnotesdb');
 
 const index = require('./routes/index');
 const users = require('./routes/users');
