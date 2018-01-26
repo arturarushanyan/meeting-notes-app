@@ -5,10 +5,12 @@ const standupSchema = new Schema({
     memberName: String,
     project: String,
     workYesterday: String,
-    worktoday: String,
+    workToday: String,
     impediment: String,
     createdOn: {
         type: Date,
-        default: Date.Now()
+        default: Date.now
     }
 });
+
+module.exports = mongoose.model('standup', standupSchema);
