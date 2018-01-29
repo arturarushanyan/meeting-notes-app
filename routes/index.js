@@ -3,7 +3,11 @@ const router  = express.Router();
 const standupCtrl = require('../controllers/standup.server.controller');
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  return standupCtrl.list(req, res);
+});
+
+router.post('/', function(req, res) {
+    return standupCtrl.filterByMember(req, res);
 });
 
 router.get('/newnote', function(req, res) {
